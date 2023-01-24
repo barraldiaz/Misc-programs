@@ -59,5 +59,6 @@ for n in range(dimt):
     
     pause(0.01)
     
-    plot(T)
+    plot(T, color='b')
+    plt.figure(1)
     show
