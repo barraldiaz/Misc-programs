@@ -4,6 +4,7 @@ from numpy import*
 from matplotlib.pyplot import*
 from numpy.linalg import inv
 
+#initial parameters
 Nx=20;Ny=20; dimt=500
 deltat=0.1;deltax=1;deltay=1
 figure(1)
@@ -21,8 +22,10 @@ for t in range(dimt):
             Tnew[i,j]=T[i,j]+sy*(T[i-1,j]-2*T[i,j]+T[i+1,j])+sx*(T[i,j-1]-2*T[i,j]+T[i,j+1])
     
     T=copy(Tnew)
-    T[0,:]=50
+    #We aply some frontier conditions
+    T[0,:]=50 
     T[-1,:]=30
+    
     #T[int(Ny/2),:]=50*abs(sin(0.01*t))
     if t%10==0:
         imshow(T,vmin=0,vmax=50,cmap='hot',interpolation='bilinear')
