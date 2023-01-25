@@ -8,7 +8,7 @@ from numpy import*
 from matplotlib.pyplot import*
 
 
-#Seleccionamos los parametros:
+#we select the parameters:
 
 N=10 ; dimt=500
 deltat=0.1;deltax=1;deltay=1
@@ -19,12 +19,12 @@ sy=alfay*deltat/deltay/deltay
 T=zeros((N+1,N+1))
 Tnew=zeros((N+1,N+1))
 
-#Condiciones iniciales:
+#Initial conditions:
 T[:,:]=0
 
 figure(1)
 
-#Condiciones de frontera:
+#Frontier conditions:
 #T[1,48:53]=400
 
 #T[45:55,45:55]=100
